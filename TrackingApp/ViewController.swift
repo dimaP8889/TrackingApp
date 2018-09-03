@@ -7,19 +7,31 @@
 //
 
 import UIKit
+import CoreMotion
+import SpriteKit
 
 class ViewController: UIViewController {
 
+    var userData = UserData()
+    
+    var timer = Timer()
+    
+    @IBOutlet weak var StepsCounter: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        userData.getData()
+        StepsCounter.text = "\(userData.NumberOfSteps)"
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateLabel), userInfo: nil, repeats: true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc func updateLabel() {
+        
+        if CMPedometer.isStepCountingAvailable() {
+            
+            StepsCounter.text = "\(userData.NumberOfSteps)"
+        }
     }
-
-
 }
 
