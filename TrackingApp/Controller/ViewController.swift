@@ -33,10 +33,11 @@ class ViewController: UIViewController {
             StepsCounter.text = "\(userData.LastSessionSteps)"
         }
         
-        Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.getDate), userInfo: nil, repeats: true)
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateLabel), userInfo: nil, repeats: true)
+        NotificationCenter.default.addObserver(self, selector:#selector(getDate), name:.NSCalendarDayChanged, object:nil) // set NotificationCenter to send data to server each day
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateLabel), userInfo: nil, repeats: true) // set timer to update label
     }
     
+    //MARK: - get today data
     @objc func getDate() {
         
         let date = Date()
@@ -54,16 +55,32 @@ class ViewController: UIViewController {
         
         userStepsDB.childByAutoId().setValue(stepsDictionaryDB)
         
-        userData.NumberOfSteps = 0
-        userData.LastSessionSteps = 0
-        self.defaults.set(0, forKey: "NumberofSteps")
+        nullData()
     }
     
+    //MARK: - After sending data do server, set steps to 0
+    func nullData() {
+        
+        userData.NumberOfSteps = 0
+        userData.LastSessionSteps = 0
+        
+        userData.pedometer.stopUpdates()
+        
+        defaults.removePersistentDomain(forName: "NumberofSteps")
+        defaults.synchronize()
+        
+        userData.getData()
+    }
+    
+    //MARK: - Update Label set on timer
     @objc func updateLabel() {
         
         if CMPedometer.isStepCountingAvailable() {
             
             StepsCounter.text = "\(userData.NumberOfSteps  + userData.LastSessionSteps)"
+            
+            self.defaults.set(self.userData.NumberOfSteps + self.userData.LastSessionSteps, forKey: "NumberofSteps")
+
         }
     }
 }

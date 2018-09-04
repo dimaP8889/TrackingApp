@@ -10,11 +10,11 @@
 		3CCF90DACBC1D9362D8FC41E /* Pods_TrackingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183436A45F977C9B979D4F3E /* Pods_TrackingApp.framework */; };
 		F40ED743213D9BFA005870AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40ED742213D9BFA005870AF /* AppDelegate.swift */; };
 		F40ED745213D9BFA005870AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40ED744213D9BFA005870AF /* ViewController.swift */; };
-		F40ED748213D9BFA005870AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40ED746213D9BFA005870AF /* Main.storyboard */; };
 		F40ED74A213D9BFE005870AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40ED749213D9BFE005870AF /* Assets.xcassets */; };
 		F40ED74D213D9BFE005870AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40ED74B213D9BFE005870AF /* LaunchScreen.storyboard */; };
 		F40ED755213D9C72005870AF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40ED754213D9C72005870AF /* UserData.swift */; };
-		F4A7E46C213DF518009CB798 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4A7E46B213DF517009CB798 /* GoogleService-Info.plist */; };
+		F4553963213EB0940027CE1D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4553962213EB0940027CE1D /* GoogleService-Info.plist */; };
+		F4553965213ECF260027CE1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4553964213ECF260027CE1D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +23,12 @@
 		F40ED73F213D9BFA005870AF /* TrackingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40ED742213D9BFA005870AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40ED744213D9BFA005870AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F40ED747213D9BFA005870AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F40ED749213D9BFE005870AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F40ED74C213D9BFE005870AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F40ED74E213D9BFE005870AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F40ED754213D9C72005870AF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		F4A7E46B213DF517009CB798 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4553962213EB0940027CE1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4553964213ECF260027CE1D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC228EEA8A78FCF712EC0452 /* Pods-TrackingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackingApp/Pods-TrackingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +87,7 @@
 				F40ED757213DF1E9005870AF /* View */,
 				F40ED758213DF1F0005870AF /* Controller */,
 				F40ED749213D9BFE005870AF /* Assets.xcassets */,
-				F4A7E46B213DF517009CB798 /* GoogleService-Info.plist */,
+				F4553962213EB0940027CE1D /* GoogleService-Info.plist */,
 				F40ED74E213D9BFE005870AF /* Info.plist */,
 			);
 			path = TrackingApp;
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				F40ED74B213D9BFE005870AF /* LaunchScreen.storyboard */,
-				F40ED746213D9BFA005870AF /* Main.storyboard */,
+				F4553964213ECF260027CE1D /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,8 +180,8 @@
 			files = (
 				F40ED74D213D9BFE005870AF /* LaunchScreen.storyboard in Resources */,
 				F40ED74A213D9BFE005870AF /* Assets.xcassets in Resources */,
-				F40ED748213D9BFA005870AF /* Main.storyboard in Resources */,
-				F4A7E46C213DF518009CB798 /* GoogleService-Info.plist in Resources */,
+				F4553963213EB0940027CE1D /* GoogleService-Info.plist in Resources */,
+				F4553965213ECF260027CE1D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,14 +246,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F40ED746213D9BFA005870AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F40ED747213D9BFA005870AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F40ED74B213D9BFE005870AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

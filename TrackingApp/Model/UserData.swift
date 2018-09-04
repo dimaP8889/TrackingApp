@@ -16,10 +16,8 @@ class UserData {
     var NumberOfSteps = 0
     
     var LastSessionSteps = 0
-    
-    let defaults = UserDefaults.standard
 
-    
+    //MARK: - get tracking info
     func getData() {
         
         pedometer.startUpdates(from: Date()) {
@@ -28,7 +26,6 @@ class UserData {
             
             DispatchQueue.main.async {
                 self.NumberOfSteps = pedometerData.numberOfSteps.intValue
-                self.defaults.set(self.NumberOfSteps + self.LastSessionSteps, forKey: "NumberofSteps")
             }
         }
     }
